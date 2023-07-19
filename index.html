@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <link rel="stylesheet" href="styles.css">
-    <title>GFX</title>
+    <title>GFX Emilico</title>
 </head>
 <body>
     <div class="relative w-full h-screen bg-yellow-200 overflow-hidden -z-0" id="container">
@@ -32,18 +31,18 @@
                 </div>
             </div>
         </div>
-        <div class="floating top-1/4 left-1/4 flex flex-row" id="weatherContainer">
-            <p id="date"></p>
-            <i class="bx bx-cloud text-black text-4xl"></i>
-            <p class="text-2xl" id="weather">...&deg;</p>
+        <div class="floating top-24 left-1/4 flex flex-row" id="weatherContainer">
+            <i class="bx bx-cloud text-black text-xl"></i>
+            <p class="text-md" id="weather">...&deg;</p>
+            <p id="date" class="text-md">17 Juli 2023</p>
         </div>
         <div class="floating top-1/4 left-2/3 px-2">
             <i class="bx bx-search text-4xl"></i>
         </div>
         <div class="floating top-1/2 right-1/4 h-16">
-            <img src="./img/1.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
-            <img src="./img/2.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
-            <img src="./img/3.png" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
+            <img src="./img/1.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm">
+            <img src="./img/2.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm">
+            <img src="./img/3.png" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm">
         </div>
         <div class="floating rounded-sm justify-start top-1/2 left-48 w-72 flex-wrap bg-white backdrop-blur-md bg-opacity-50">
             <div class="flex flex-row justify-between items-center shadow-sm w-full cursor-pointer">
@@ -63,24 +62,24 @@
             </div>
         </div>
         <div class="floating top-2/3 left-3/4 w-24 h-24 grid grid-cols-2 grid-rows-2 justify-center items-center text-center">
-            <button class="bg-yellow-300 p-1 rounded-sm">
+            <a class="bg-yellow-300 p-1 rounded-sm" href="discord:">
                 <i class="bx bxl-discord-alt text-xl text-white"></i>
-            </button>
-            <button class="bg-yellow-300 p-1 rounded-sm">
+            </a>
+            <a class="bg-yellow-300 p-1 rounded-sm" href="https://facebook.com">
                 <i class="bx bxl-facebook text-xl text-white"></i>
-            </button>
-            <button class="bg-yellow-300 p-1 rounded-sm">
+            </a>
+            <a class="bg-yellow-300 p-1 rounded-sm" href="https://instagram.com">
                 <i class="bx bxl-instagram text-xl text-white"></i>
-            </button>
-            <button class="bg-yellow-300 p-1 rounded-sm">
+            </a>
+            <a class="bg-yellow-300 p-1 rounded-sm" href="https://twitter.com">
                 <i class="bx bxl-twitter text-xl text-white"></i>
-            </button>
+            </a>
         </div>
         <!-- <div class="floating top-3/4 left-1/2 -translate-x-1/2 -translate-y-3/4 bg-transparent shadow-none">
         </div> -->
          <!-- Music Player -->
-         <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
-         <div class="floating top-0 right-0 m-4 w-72 flex-col justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer">
+         <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
+         <div class="floating top-0 right-0 m-4 w-72 flex-col justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer">
              <div class="flex justify-between items-center w-full px-2">
                  <i class="bx bx-chevron-left text-3xl"></i>
                  <button onclick="document.getElementById('musicPlayer').style.scale = '0'">

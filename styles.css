@@ -646,6 +646,11 @@ button{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 i.bx{
   cursor: pointer;
 }
@@ -712,6 +717,14 @@ i.bx{
 
 .top-3\/4{
   top: 75%;
+}
+
+.top-48{
+  top: 12rem;
+}
+
+.top-24{
+  top: 6rem;
 }
 
 .-z-0{
@@ -977,6 +990,10 @@ i.bx{
 
 .bg-\[linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.75\)\2c rgba\(0\2c 0\2c 0\2c 0\.75\)\)\2c url\(\'\/img\/music\.jpg\'\)\]{
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg');
+}
+
+.bg-\[linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.75\)\2c rgba\(0\2c 0\2c 0\2c 0\.75\)\)\2c url\(\'\.\/img\/music\.jpg\'\)\]{
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg');
 }
 
 .bg-cover{
