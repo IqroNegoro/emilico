@@ -35,5 +35,9 @@ draggableElement.forEach(v => {
         document.addEventListener("mousemove", handleMoveMouse);
         document.addEventListener("mouseup", handleMouseUp);
     })
+
+    v.addEventListener("dblclick", () => {
+        alert("tesst")
+    })
 })
 })

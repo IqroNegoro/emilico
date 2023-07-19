@@ -827,6 +827,15 @@ i.bx{
   width: 100%;
 }
 
+.w-auto{
+  width: auto;
+}
+
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .origin-top-right{
   transform-origin: top right;
 }
