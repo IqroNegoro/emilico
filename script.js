@@ -1,6 +1,7 @@
 let fetchingWeather = async () => {
-    let {data} = await axios.get('https://dataservice.accuweather.com/currentconditions/v1/202513?apikey=TADziGdDmLttfBFX2HAGTZGcSCKNJUvx');
-    document.getElementById("weather").innerHTML = `${data[0].Temperature.Metric.Value}&deg;`
+    let {data} = await axios.get('https://api.open-meteo.com/v1/forecast?latitude=-6.7063&longitude=108.557&current_weather=true');
+    console.log(data)
+    document.getElementById("weather").innerHTML = `${data.current_weather.temperature}&deg;`
 }
 
 fetchingWeather();

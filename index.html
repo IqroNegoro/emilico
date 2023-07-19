@@ -12,13 +12,33 @@
     <div class="relative w-full h-screen bg-yellow-200 overflow-hidden -z-0" id="container">
         <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-white rounded-full -z-10"></div>
         <img src="./img/emilico.png" alt="emilico" class="w-1/2 mx-auto">
-        <div class="floating top-1/4 left-2/3 px-2">
-            <i class="bx bx-search text-4xl"></i>
+        <div class="floating top-14 left-24 w-64 h-72 flex flex-col items-start p-0 py-1">
+            <div class="flex flex-row w-full gap-2 items-center p-1">
+                <img src="./img/profile.jpg" alt="emilico" class="w-8 h-8 overflow-hidden aspect-square object-cover object-top bg-yellow-500 rounded-full">
+                <p>Emilico Chan</p>
+                <i class='bx bx-dots-vertical-rounded ml-auto'></i>
+            </div>
+            <div class="w-full overflow-hidden">
+                <img src="./img/instagram.jpg" alt="instagram">
+            </div>
+            <div class="flex flex-row w-full justify-between px-1">
+                <div>
+                    <i class="bx bxs-heart text-red-500 text-xl"></i>
+                    <i class='bx bxs-share-alt text-xl'></i>
+                    <i class='bx bx-message-square text-xl'></i>
+                </div>
+                <div>
+                    <i class='bx bx-bookmark text-xl'></i>
+                </div>
+            </div>
         </div>
         <div class="floating top-1/4 left-1/4 flex flex-row" id="weatherContainer">
             <p id="date"></p>
             <i class="bx bx-cloud text-black text-4xl"></i>
-            <p class="text-2xl" id="weather">0.0&deg;</p>
+            <p class="text-2xl" id="weather">...&deg;</p>
+        </div>
+        <div class="floating top-1/4 left-2/3 px-2">
+            <i class="bx bx-search text-4xl"></i>
         </div>
         <div class="floating top-1/2 right-1/4 h-16">
             <img src="./img/1.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
@@ -56,6 +76,8 @@
                 <i class="bx bxl-twitter text-xl text-white"></i>
             </button>
         </div>
+        <!-- <div class="floating top-3/4 left-1/2 -translate-x-1/2 -translate-y-3/4 bg-transparent shadow-none">
+        </div> -->
          <!-- Music Player -->
          <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
          <div class="floating top-0 right-0 m-4 w-72 flex-col justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer">

@@ -646,6 +646,10 @@ button{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+i.bx{
+  cursor: pointer;
+}
+
 .absolute{
   position: absolute;
 }
@@ -664,6 +668,10 @@ button{
 
 .left-2\/3{
   left: 66.666667%;
+}
+
+.left-24{
+  left: 6rem;
 }
 
 .left-3\/4{
@@ -694,12 +702,16 @@ button{
   top: 25%;
 }
 
-.top-3\/4{
-  top: 75%;
+.top-14{
+  top: 3.5rem;
 }
 
 .top-2\/3{
   top: 66.666667%;
+}
+
+.top-3\/4{
+  top: 75%;
 }
 
 .-z-0{
@@ -723,6 +735,10 @@ button{
   margin-top: 1rem;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
 .flex{
   display: flex;
 }
@@ -743,8 +759,16 @@ button{
   height: 4rem;
 }
 
-.h-48{
-  height: 12rem;
+.h-24{
+  height: 6rem;
+}
+
+.h-72{
+  height: 18rem;
+}
+
+.h-8{
+  height: 2rem;
 }
 
 .h-\[40rem\]{
@@ -753,10 +777,6 @@ button{
 
 .h-screen{
   height: 100vh;
-}
-
-.h-24{
-  height: 6rem;
 }
 
 .w-1\/2{
@@ -771,6 +791,10 @@ button{
   width: 3.5rem;
 }
 
+.w-24{
+  width: 6rem;
+}
+
 .w-3\/4{
   width: 75%;
 }
@@ -779,12 +803,16 @@ button{
   width: 8rem;
 }
 
+.w-64{
+  width: 16rem;
+}
+
 .w-72{
   width: 18rem;
 }
 
-.w-96{
-  width: 24rem;
+.w-8{
+  width: 2rem;
 }
 
 .w-\[40rem\]{
@@ -793,14 +821,6 @@ button{
 
 .w-full{
   width: 100%;
-}
-
-.w-48{
-  width: 12rem;
-}
-
-.w-24{
-  width: 6rem;
 }
 
 .origin-top-right{
@@ -814,6 +834,11 @@ button{
 
 .-translate-y-1\/2{
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-3\/4{
+  --tw-translate-y: -75%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -841,6 +866,10 @@ button{
   flex-wrap: wrap;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
 }
@@ -849,12 +878,20 @@ button{
   justify-content: flex-start;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
 
 .justify-between{
   justify-content: space-between;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-3{
@@ -867,6 +904,18 @@ button{
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.place-self-end{
+  place-self: end;
+}
+
+.self-end{
+  align-self: flex-end;
+}
+
+.justify-self-end{
+  justify-self: end;
 }
 
 .overflow-hidden{
@@ -889,6 +938,19 @@ button{
   border-radius: 0.125rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -902,6 +964,11 @@ button{
 .bg-yellow-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50{
@@ -929,17 +996,36 @@ button{
      object-fit: cover;
 }
 
-.p-2{
-  padding: 0.5rem;
+.object-top{
+  -o-object-position: top;
+     object-position: top;
+}
+
+.p-0{
+  padding: 0px;
 }
 
 .p-1{
   padding: 0.25rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .text-center{
@@ -948,6 +1034,10 @@ button{
 
 .text-justify{
   text-align: justify;
+}
+
+.text-end{
+  text-align: end;
 }
 
 .text-2xl{
@@ -992,6 +1082,11 @@ button{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1005,6 +1100,12 @@ button{
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-none{
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
