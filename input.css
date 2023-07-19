@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        /* Hides the slider so that custom slider can be made */
+        /* Specific width is required for Firefox. */
+        background: transparent;
+        /* Otherwise white in Chrome */
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+        /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+
+    input[type=range]::-ms-track {
+        cursor: pointer;
+
+        /* Hides the slider so custom styles can be added */
+        background: transparent;
+        color: transparent;
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+        @apply appearance-none w-2 h-2 rounded-full cursor-pointer bg-red-500 border-8 border-red-500;
+    }
+    
+    input[type=range]::-webkit-slider-runnable-track {
+        @apply w-full bg-white bg-opacity-50 outline-none border-none;
+    }
+    
+    button {
+        @apply outline-none;
+    }
+}
+
+@layer components {
+    .floating {
+        @apply absolute w-auto bg-white rounded-md shadow-md flex justify-center items-center gap-2 p-2;
+    }
+
+    .active {
+        @apply bg-red-600;
+    }
+}

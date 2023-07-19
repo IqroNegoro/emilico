@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="styles.css">
+    <title>GFX</title>
+</head>
+<body>
+    <div class="relative w-full h-screen bg-yellow-200 overflow-hidden -z-0" id="container">
+        <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-white rounded-full -z-10"></div>
+        <img src="./img/emilico.png" alt="emilico" class="w-1/2 mx-auto">
+        <div class="floating top-1/4 left-2/3 px-2">
+            <i class="bx bx-search text-4xl"></i>
+        </div>
+        <div class="floating top-1/4 left-1/4 flex flex-row" id="weatherContainer">
+            <p id="date"></p>
+            <i class="bx bx-cloud text-black text-4xl"></i>
+            <p class="text-2xl" id="weather">0.0&deg;</p>
+        </div>
+        <div class="floating top-1/2 right-1/4 h-16">
+            <img src="./img/1.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
+            <img src="./img/2.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
+            <img src="./img/3.png" alt="emilico" class="aspect-square w-12 rounded-md shadow-md">
+        </div>
+        <div class="floating rounded-sm justify-start top-1/2 left-48 w-72 flex-wrap bg-white backdrop-blur-md bg-opacity-50">
+            <div class="flex flex-row justify-between items-center shadow-sm w-full cursor-pointer">
+                <div class="flex flex-row justify-center items-center">
+                    <i class="bx bx-chevron-left text-3xl"></i>
+                    <p class="text-xl">Back</p>
+                </div>
+                <div>
+                    <i class='bx bx-dots-vertical-rounded text-3xl cursor-pointer'></i>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-center font-semibold tracking-wider">Personality</h1>
+                <p class="text-sm text-justify break-keep antialiased font-medium">
+                    Emilico is cheerful and hard-working. Her top priority is taking care of her master, Kate Shadow, with whom she is friends. She likes making friends and spending time with them. Although she is inexperienced and clumsy at times, she is also dependable. She keeps a positive attitude and stands up for others. Emilico is curious and eager to learn new things. She enjoys cleaning in the Shadows House and always tries to improve.
+                </p>
+            </div>
+        </div>
+        <div class="floating top-2/3 left-3/4 w-24 h-24 grid grid-cols-2 grid-rows-2 justify-center items-center text-center">
+            <button class="bg-yellow-300 p-1 rounded-sm">
+                <i class="bx bxl-discord-alt text-xl text-white"></i>
+            </button>
+            <button class="bg-yellow-300 p-1 rounded-sm">
+                <i class="bx bxl-facebook text-xl text-white"></i>
+            </button>
+            <button class="bg-yellow-300 p-1 rounded-sm">
+                <i class="bx bxl-instagram text-xl text-white"></i>
+            </button>
+            <button class="bg-yellow-300 p-1 rounded-sm">
+                <i class="bx bxl-twitter text-xl text-white"></i>
+            </button>
+        </div>
+         <!-- Music Player -->
+         <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
+         <div class="floating top-0 right-0 m-4 w-72 flex-col justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer">
+             <div class="flex justify-between items-center w-full px-2">
+                 <i class="bx bx-chevron-left text-3xl"></i>
+                 <button onclick="document.getElementById('musicPlayer').style.scale = '0'">
+                     <i class='bx bx-x text-3xl cursor-pointer'></i>
+                 </button>
+             </div>
+             <h1 class="font-semibold">A Hollow Shadow</h1>
+             <img src="./img/music.jpg" alt="music" class="aspect-square object-cover rounded-full w-32" id="imageMusic">
+             <div class="flex justify-between items-center w-3/4 flex-col mt-4 gap-4">
+                 <div class="flex gap-3 flex-wrap justify-between">
+                     <input type="range" class="w-full cursor-pointer" id="slider" value="0" step="1">
+                     <span id="start">00:00</span>
+                     <span id="end">1:30</span>
+                 </div>
+                 <div class="w-full flex justify-between items-center">
+                     <button onclick="handleRepeat()" class="hover:bg-red-500 px-2 transition-all duration-150 rounded-sm">
+                         <i class="bx bx-repeat text-2xl" id="btnRepeat"></i>
+                     </button>
+                     <button onclick="handlePlayAudio()" class="hover:bg-red-500 px-2 transition-all duration-150 rounded-sm">
+                         <i class="bx bx-play text-4xl" id="btnPlay"></i>
+                     </button>
+                     <button onclick="handleMute()" class="hover:bg-red-500 px-2 transition-all duration-150 rounded-sm">
+                         <i class="bx bx-volume-full text-2xl" id="btnVol"></i>
+                     </button>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>
