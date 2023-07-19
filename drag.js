@@ -19,6 +19,8 @@ const handleMoveMouse = ({clientX: x, clientY: y}) => {
 const handleMouseUp = () => {
     document.removeEventListener("mousemove", handleMoveMouse);
     document.removeEventListener("mouseup", handleMouseUp);
+    document.removeEventListener("touchmove", handleMoveMouse);
+    document.removeEventListener("touchend", handleMouseUp);
 }
 
 const handleClick = ({clientX: x, clientY: y, currentTarget}) => {
@@ -32,14 +34,17 @@ const handleClick = ({clientX: x, clientY: y, currentTarget}) => {
 
     document.addEventListener("mousemove", handleMoveMouse);
     document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("touchmove", handleMoveMouse);
+    document.addEventListener("touchend", handleMouseUp);
 }
+
 
 draggableElement.forEach(v => {
     v.addEventListener("mousedown", e => {
         target = v;
         handleClick(e);
     })
-    v.addEventListener("pointerdown", e => {
+    v.addEventListener("touchstart", e => {
         target = v;
         handleClick(e);
     })
