@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +7,7 @@
     html {
         -webkit-tap-highlight-color: transparent;
         user-select: none;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Open Sans', 'Nunito', sans-serif;
     }
 
     input[type=range] {
@@ -51,7 +50,7 @@
 
 @layer components {
     .floating {
-        @apply absolute w-auto bg-white rounded-md shadow-md flex justify-center items-center gap-2 p-2;
+        @apply absolute w-auto bg-white rounded-md shadow-md flex justify-center items-center gap-2 p-2 opacity-0;
     }
 
     .active {
@@ -60,5 +59,13 @@
 
     i.bx {
         @apply cursor-pointer;
+    }
+
+    .dot {
+        @apply w-1 h-1 md:w-2 md:h-2 bg-slate-300 rounded-full cursor-pointer;
+    }
+
+    .dot.active {
+        @apply bg-yellow-300;
     }
 }

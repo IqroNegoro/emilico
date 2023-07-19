@@ -17,14 +17,14 @@ const handleMoveMouse = ({clientX: x, clientY: y}) => {
 }
 
 const handleMouseUp = () => {
+    target = ''
     document.removeEventListener("mousemove", handleMoveMouse);
     document.removeEventListener("mouseup", handleMouseUp);
-    document.removeEventListener("touchmove", handleMoveMouse);
-    document.removeEventListener("touchend", handleMouseUp);
+    document.removeEventListener("touchmove", handleMoveMouse, false);
+    document.removeEventListener("touchend", handleMouseUp, false);
 }
 
 const handleClick = ({clientX: x, clientY: y, currentTarget}) => {
-    console.log(x,y, currentTarget)
     let {x: elX, y: elY} = currentTarget.getBoundingClientRect();
     pos = {
         elX,

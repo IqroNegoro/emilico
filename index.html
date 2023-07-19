@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <title>GFX Emilico</title>
 </head>
-<body style="overscroll-behavior: none;">
-    <div class="relative w-full h-screen bg-yellow-200 overflow-hidden -z-0" id="container">
-        <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-white rounded-full -z-10"></div>
-        <img draggable="false" src="./img/emilico.png" alt="emilico" class="w-1/2 mx-auto animate-up">
-        <div class="floating animate-up top-14 left-24 w-64 h-72 flex flex-col items-start p-0 py-1">
+<body style="overscroll-behavior: none;" class="overflow-hidden">
+    <div class="relative w-full h-screen bg-yellow-200 overflow-hidden -z-0 max-md:flex" id="container">
+        <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[28rem] h-[28rem] md:w-[40rem] md:h-[40rem] bg-white rounded-full -z-10"></div>
+        <img draggable="false" src="./img/emilico.png" alt="emilico" class="max-md:self-center md:w-1/2 mx-auto animate-up">
+        <div class="floating animate-up top-8 left-2 md:top-14 md:left-24 w-48 md:w-64 flex flex-col items-start p-0 py-1 -z-10">
             <div class="flex flex-row w-full gap-2 items-center p-1">
-                <img draggable="false" src="./img/profile.jpg" alt="emilico" class="w-8 h-8 overflow-hidden aspect-square object-cover object-top bg-yellow-500 rounded-full">
+                <img draggable="false" src="./img/profile.jpg" alt="emilico" class="w-6 h-6 md:w-8 md:h-8 overflow-hidden aspect-square object-cover object-top bg-yellow-500 rounded-full">
                 <p>Emilico Chan</p>
                 <i class='bx bx-dots-vertical-rounded ml-auto'></i>
             </div>
-            <div class="w-full overflow-hidden">
-                <img draggable="false" src="./img/instagram.jpg" alt="instagram" class="animate-up">
+            <div class="w-full h-40 md:h-60 overflow-hidden">
+                <img draggable="false" src="./img/instagram.jpg" alt="instagram" class="animate-up" id="imageIG">
+            </div>
+            <div class="w-full flex justify-center items-center gap-1">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
             </div>
             <div class="flex flex-row w-full justify-between px-1">
                 <div>
@@ -31,21 +37,30 @@
                     <i class='bx bx-bookmark text-xl'></i>
                 </div>
             </div>
+            <div class="px-1">
+                <p class="text-xs">Liked By <span class="text-red-500 font-bold">Kate_Sama</span> and <span class="font-bold">other</span></p>
+                <p class="font-semibold text-xs">Comments...</p>
+                <p class="text-xs font-semibold">Kate_Sama <span class="font-normal">Emilico KAAAANIII</span></p>
+                <p class="text-xs font-semibold">Nadila <span class="font-normal">Makhluk imuff apa ini???</span></p>
+            </div>
         </div>
-        <div class="floating animate-up top-24 left-1/4 flex flex-row" id="weatherContainer">
+        <div class="floating animate-up top-3/4 md:top-24 left-1/4 flex flex-row" id="weatherContainer">
             <i class="bx bx-cloud text-black text-xl"></i>
             <p class="text-md" id="weather">...&deg;</p>
             <p id="date" class="text-md">17 Juli 2023</p>
         </div>
-        <div class="floating animate-up top-1/4 left-2/3 px-2">
-            <i class="bx bx-search text-4xl"></i>
+        <form onsubmit="search()" class="floating animate-up rounded-sm top-24 md:top-1/4 left-1/2 md:left-2/3 p-2">
+            <button type="submit">
+                <i class="bx bx-search text-4xl hover:text-yellow-white hover:text-white rounded-sm hover:bg-yellow-300 px-1 transition-all duration-150"></i>
+            </button>
+            <input type="text" class="w-32 outline-none rounded-sm font-semibold placeholder:text-yellow-300 tracking-widest text-yellow-500 placeholder:tracking-wider" placeholder="Emilico Lucuk" id="inputSearch">
+        </form>
+        <div class="floating animate-up top-1/2 w-max right-0 md:right-1/4 h-16 backdrop-blur-sm bg-opacity-50">
+            <img draggable="false" src="./img/1.jpg" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
+            <img draggable="false" src="./img/2.jpg" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
+            <img draggable="false" src="./img/3.png" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
         </div>
-        <div class="floating animate-up top-1/2 w-max right-1/4 h-16">
-            <img draggable="false" src="./img/1.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm opacity-0 animate-right">
-            <img draggable="false" src="./img/2.jpg" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm opacity-0 animate-right">
-            <img draggable="false" src="./img/3.png" alt="emilico" class="aspect-square w-12 rounded-md shadow-sm opacity-0 animate-right">
-        </div>
-        <div class="floating animate-up rounded-sm justify-start top-1/2 left-48 w-72 flex-wrap bg-white backdrop-blur-md bg-opacity-50">
+        <div class="floating animate-up rounded-sm justify-start top-1/2 left-48 w-72 flex-wrap bg-white hidden md:flex">
             <div class="flex flex-row justify-between items-center shadow-sm w-full cursor-pointer">
                 <div class="flex flex-row justify-center items-center">
                     <i class="bx bx-chevron-left text-3xl"></i>
@@ -62,17 +77,17 @@
                 </p>
             </div>
         </div>
-        <div class="floating animate-up top-2/3 left-3/4 w-24 h-24 grid grid-cols-2 grid-rows-2 justify-center items-center text-center">
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm" href="discord:">
+        <div class="floating animate-up top-2/3 left-0 md:top-2/3 md:left-3/4 w-24 h-24 grid grid-cols-2 grid-rows-2 justify-center items-center text-center">
+            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="discord:">
                 <i class="bx bxl-discord-alt text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm" href="https://facebook.com">
+            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://facebook.com">
                 <i class="bx bxl-facebook text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm" href="https://instagram.com">
+            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://instagram.com">
                 <i class="bx bxl-instagram text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm" href="https://twitter.com">
+            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://twitter.com">
                 <i class="bx bxl-twitter text-xl text-white"></i>
             </a>
         </div>
@@ -80,17 +95,17 @@
         </div> -->
          <!-- Music Player -->
          <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
-         <div class="floating animate-up top-0 right-0 m-4 w-72 flex-col justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer">
-             <div class="flex justify-between items-center w-full px-2">
+         <div class="floating animate-after-up top-0 right-0 md:m-2 max-md:h-screen w-full md:w-72 flex-col md:justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer" style="scale: 0">
+             <div class="flex justify-between items-center w-full px-2 max-md:absolute max-md:top-0 max-md:left-0 max-md:p-4">
                  <i class="bx bx-chevron-left text-3xl"></i>
                  <button onclick="document.getElementById('musicPlayer').style.scale = '0'">
                      <i class='bx bx-x text-3xl cursor-pointer'></i>
                  </button>
              </div>
              <h1 class="font-semibold">A Hollow Shadow</h1>
-             <img draggable="false" src="./img/music.jpg" alt="music" class="aspect-square object-cover rounded-full w-32" id="imageMusic">
-             <div class="flex justify-between items-center w-3/4 flex-col mt-4 gap-4">
-                 <div class="flex gap-3 flex-wrap justify-between">
+             <img draggable="false" src="./img/music.jpg" alt="music" class="aspect-square object-cover rounded-full w-64 md:w-32" id="imageMusic">
+             <div class="flex md:justify-between items-center w-3/4 flex-col md:mt-4 gap-4">
+                 <div class="w-full flex gap-3 flex-wrap justify-between">
                      <input type="range" class="w-full cursor-pointer" id="slider" value="0" step="1">
                      <span id="start">00:00</span>
                      <span id="end">1:30</span>
@@ -108,6 +123,7 @@
                  </div>
              </div>
          </div>
+         <hr class="border-t-2 border-t-white absolute left-1/2 bottom-20 md:bottom-4 -translate-x-1/2 -translate-y-1/2 w-1/2">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
