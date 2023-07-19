@@ -51,7 +51,7 @@
 
 @layer components {
     .floating {
-        @apply absolute w-auto bg-white rounded-md shadow-md flex justify-center items-center gap-2 p-2 opacity-0;
+        @apply absolute w-auto bg-white rounded-md shadow-md flex justify-center items-center gap-2 p-2;
     }
 
     .active {
