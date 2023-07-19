@@ -45,7 +45,6 @@ draggableElement.forEach(v => {
         handleClick(e);
     })
     v.addEventListener("touchstart", e => {
-        alert("lah")
         target = v;
         handleClick(e);
     }, false)
