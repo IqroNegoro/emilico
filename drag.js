@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
     const draggableElement = document.querySelectorAll(".floating");
     let target;
     let pos = {
@@ -56,5 +55,4 @@ draggableElement.forEach(v => {
             currentTarget: e.currentTarget
         });
     }, false)
-})
 })

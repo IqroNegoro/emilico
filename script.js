@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const isSearch = false;
     const inputSearch = document.getElementById("inputSearch");
 
     let fetchingWeather = async () => {
@@ -19,14 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.getElementById("date").textContent = date;
     
-    const search = e => {
-        e.preventDefault()
-        if (isSearch) {
-            let { value } = inputSearch;
-            location.href = `https://www.google.com/search?q=${value}`
-        } else {
-            inputSearch.classList.add("")
-        }
+    let searchingGoogle = e => {
+        location.href = `https://www.google.com/search?q=${inputSearch.value}`
     }
 
     let arrImage = [
@@ -45,5 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
             v.classList.add("active")
         })
     })
-    
-})
