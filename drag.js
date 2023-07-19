@@ -14,9 +14,11 @@ const handleMoveMouse = ({clientX: x, clientY: y}) => {
     let newY = y - pos.y;
     target.style.left = `${pos.elX + newX}px`;
     target.style.top = `${pos.elY + newY}px`;
+    alert("aku di gerakin")
 }
 
 const handleMouseUp = () => {
+    alert("aku di ambil TWT")
     document.removeEventListener("mousemove", handleMoveMouse);
     document.removeEventListener("mouseup", handleMouseUp);
     document.removeEventListener("touchmove", handleMoveMouse);
