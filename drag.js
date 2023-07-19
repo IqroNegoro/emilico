@@ -21,23 +21,27 @@ const handleMouseUp = () => {
     document.removeEventListener("mouseup", handleMouseUp);
 }
 
+const handleClick = ({clientX: x, clientY: y, currentTarget}) => {
+    let {x: elX, y: elY} = currentTarget.getBoundingClientRect();
+    pos = {
+        elX,
+        elY,
+        x,
+        y
+    }
+
+    document.addEventListener("mousemove", handleMoveMouse);
+    document.addEventListener("mouseup", handleMouseUp);
+}
+
 draggableElement.forEach(v => {
-    v.addEventListener("mousedown", ({clientX: x, clientY: y, currentTarget}) => {
+    v.addEventListener("mousedown", e => {
         target = v;
-        let {x: elX, y: elY} = currentTarget.getBoundingClientRect();
-        pos = {
-            elX,
-            elY,
-            x,
-            y
-        }
-
-        document.addEventListener("mousemove", handleMoveMouse);
-        document.addEventListener("mouseup", handleMouseUp);
+        handleClick(e);
     })
-
-    v.addEventListener("dblclick", () => {
-        alert("tesst")
+    v.addEventListener("pointerdown", e => {
+        target = v;
+        handleClick(e);
     })
 })
 })
