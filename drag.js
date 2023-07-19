@@ -34,8 +34,8 @@ const handleClick = ({clientX: x, clientY: y, currentTarget}) => {
 
     document.addEventListener("mousemove", handleMoveMouse);
     document.addEventListener("mouseup", handleMouseUp);
-    document.addEventListener("touchmove", handleMoveMouse);
-    document.addEventListener("touchend", handleMouseUp);
+    document.addEventListener("touchmove", handleMoveMouse, false);
+    document.addEventListener("touchend", handleMouseUp, false);
 }
 
 
@@ -45,8 +45,9 @@ draggableElement.forEach(v => {
         handleClick(e);
     })
     v.addEventListener("touchstart", e => {
+        alert("lah")
         target = v;
         handleClick(e);
-    })
+    }, false)
 })
 })
