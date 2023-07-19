@@ -641,14 +641,10 @@ button{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 0.5rem;
+  opacity: 0;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.active{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 i.bx{
@@ -715,16 +711,12 @@ i.bx{
   top: 66.666667%;
 }
 
-.top-3\/4{
-  top: 75%;
-}
-
-.top-48{
-  top: 12rem;
-}
-
 .top-24{
   top: 6rem;
+}
+
+.top-3\/4{
+  top: 75%;
 }
 
 .-z-0{
@@ -744,12 +736,12 @@ i.bx{
   margin-right: auto;
 }
 
-.mt-4{
-  margin-top: 1rem;
-}
-
 .ml-auto{
   margin-left: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .flex{
@@ -891,10 +883,6 @@ i.bx{
   justify-content: flex-start;
 }
 
-.justify-end{
-  justify-content: flex-end;
-}
-
 .justify-center{
   justify-content: center;
 }
@@ -919,18 +907,6 @@ i.bx{
   gap: 1.5rem;
 }
 
-.place-self-end{
-  place-self: end;
-}
-
-.self-end{
-  align-self: flex-end;
-}
-
-.justify-self-end{
-  justify-self: end;
-}
-
 .overflow-hidden{
   overflow: hidden;
 }
@@ -949,15 +925,6 @@ i.bx{
 
 .rounded-sm{
   border-radius: 0.125rem;
-}
-
-.border{
-  border-width: 1px;
-}
-
-.border-red-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .bg-transparent{
@@ -986,10 +953,6 @@ i.bx{
 
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
-}
-
-.bg-\[linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.75\)\2c rgba\(0\2c 0\2c 0\2c 0\.75\)\)\2c url\(\'\/img\/music\.jpg\'\)\]{
-  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('/img/music.jpg');
 }
 
 .bg-\[linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.75\)\2c rgba\(0\2c 0\2c 0\2c 0\.75\)\)\2c url\(\'\.\/img\/music\.jpg\'\)\]{
@@ -1053,10 +1016,6 @@ i.bx{
   text-align: justify;
 }
 
-.text-end{
-  text-align: end;
-}
-
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1114,10 +1073,8 @@ i.bx{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.shadow-md{
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.opacity-0{
+  opacity: 0;
 }
 
 .shadow-none{
