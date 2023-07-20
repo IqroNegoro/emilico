@@ -935,6 +935,10 @@ i.bx{
   animation: dela;
 }
 
+.animate-\[delay-\[500\]\]{
+  animation: delay-[500];
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1198,6 +1202,16 @@ i.bx{
 .text-yellow-500{
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.text-yellow-200{
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
+}
+
+.text-yellow-300{
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity));
 }
 
 .antialiased{
