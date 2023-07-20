@@ -909,6 +909,32 @@ i.bx{
   animation: bounce 1s infinite;
 }
 
+@keyframes floating{
+  0%{
+    trasform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-20px);
+  }
+
+  100%{
+    trasform: translateY(0);
+  }
+}
+
+.animate-floating{
+  animation: floating 5s ease-in-out infinite;
+}
+
+.animate-\[delay\]{
+  animation: delay;
+}
+
+.animate-\[dela\]{
+  animation: dela;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1216,6 +1242,10 @@ i.bx{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.delay-200{
+  transition-delay: 200ms;
 }
 
 .duration-150{
