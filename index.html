@@ -49,10 +49,15 @@
             <p class="text-md" id="weather">...&deg;</p>
             <p id="date" class="text-md">17 Juli 2023</p>
         </div>
-        <div class="floating animate-up md:top-16 md:left-1/2 top-1/4 left-3/4 p-1 font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md">
-            <p class="bg-yellow-400 rounded-md p-2 text-white">
+        <div class="floating animate-up md:top-16 md:left-1/2 top-1/4 left-3/4 p-1 font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
+            <p class="bg-yellow-400 rounded-md p-2 text-white animate-right opacity-0">
                 Aa.
             </p>
+        </div>
+        <div class="floating animate-up md:top-3/4 md:left-2/3 top-2/3 left-3/4 p-1 font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
+            <div class="bg-yellow-400 rounded-md text-white py-1 px-2">
+                <i class='bx bxs-bell-ring animate-right opacity-0'></i>
+            </div>
         </div>
         <div class="floating animate-up rounded-sm top-24 md:top-1/4 left-1/2 md:left-2/3 p-2">
             <button onclick="searchingGoogle()">
@@ -96,8 +101,13 @@
                 <i class="bx bxl-twitter text-xl text-white"></i>
             </a>
         </div>
-        <!-- <div class="floating animate-up top-3/4 left-1/2 -translate-x-1/2 -translate-y-3/4 bg-transparent shadow-none">
-        </div> -->
+        <div class="floating animate-up max-md:hidden top-3/4 left-[40%] backdrop-blur-3xl bg-transparent shadow-none w-max flex-row rounded-full opacity-0">
+            <img src="./img/front.jpg" alt="Emilico TwT" class="rounded-full w-16 animate-right opacity-0">
+            <div class="animate-right opacity-0">
+                <p class="font-semibold text-yellow-500">Emilico Lucuk Banget <i class="bx bxs-heart text-red-500"></i></p>
+                <p class="text-white">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
          <!-- Music Player -->
          <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.scale = 1"></button>
          <div class="floating animate-after-up top-0 right-0 md:m-2 max-md:h-screen w-full md:w-72 flex-col md:justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right" id="musicPlayer" style="scale: 0">

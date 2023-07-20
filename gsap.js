@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 x: 0,
                 opacity: 1,
                 stagger: 0.25,
-                onComplete: () => {
+                onComplete: () => { 
                     gsap.fromTo("#musicPlayer", {
                         y: 10,
                         opacity: 0,
