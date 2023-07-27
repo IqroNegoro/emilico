@@ -44,10 +44,12 @@ const handleClick = ({clientX: x, clientY: y}) => {
 
 draggableElement.forEach(v => {
     v.addEventListener("mousedown", e => {
+        e.stopPropagation();
         target = v;
         handleClick(e);
     })
     v.addEventListener("touchstart", e => {
+        e.stopPropagation();
         target = v;
         handleClick({
             clientX: e.touches[0].clientX,

@@ -16,13 +16,17 @@
         <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 hidden md:block md:w-[88rem] md:h-[88rem] bg-transparent border-[12px] border-white rounded-full -z-10"></div>
         <img draggable="false" src="./img/emilico.png" alt="emilico" class="max-md:self-center md:w-1/2 mx-auto animate-up">
         <div class="floating animate-up top-8 left-2 md:top-14 md:left-24 w-48 md:w-64 flex flex-col items-start p-0 py-1 -z-10 animate-floating">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
             <div class="flex flex-row w-full gap-2 items-center p-1">
                 <img draggable="false" src="./img/profile.jpg" alt="emilico" class="w-6 h-6 md:w-8 md:h-8 overflow-hidden aspect-square object-cover object-top bg-yellow-500 rounded-full">
                 <p>Emilico Chan</p>
                 <i class='bx bx-dots-vertical-rounded ml-auto'></i>
             </div>
             <div class="w-full h-40 md:h-60 overflow-hidden">
-                <img draggable="false" src="./img/instagram.jpg" alt="instagram" class="animate-up" id="imageIG">
+                <img draggable="false" src="./img/instagram.jpg" alt="instagram" class="animate-up w-full" id="imageIG">
             </div>
             <div class="w-full flex justify-center items-center gap-1">
                 <button class="dot active"></button>
@@ -48,32 +52,56 @@
             </div>
         </div>
         <div class="floating animate-up top-3/4 md:top-24 left-1/4 flex flex-row" id="weatherContainer">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
             <i class="bx bx-cloud text-black text-xl"></i>
             <p class="text-md" id="weather">...&deg;</p>
             <p id="date" class="text-md">17 Juli 2023</p>
         </div>
-        <div class="floating animate-up md:top-16 md:left-1/2 top-1/4 left-3/4 p-1 font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
-            <p class="bg-yellow-400 rounded-md p-2 text-white animate-right opacity-0">
+        <div class="floating animate-up md:top-16 md:left-1/2 top-1/4 left-3/4 p-1 font-extrabold overflow-visible text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
+            <p class="bg-yellow-400 rounded-md p-2 flex justify-center items-center w-full h-full text-white animate-right opacity-0">
                 Aa.
             </p>
         </div>
-        <div class="floating animate-up md:top-3/4 md:left-2/3 top-2/3 left-3/4 p-1 font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
-            <div class="bg-yellow-400 rounded-md text-white py-1 px-2">
+        <div class="floating animate-up md:top-3/4 md:left-2/3 top-2/3 left-3/4 p-1 overflow-visible font-extrabold text-xl animate-bounce before:content-[''] before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-transparent before:border-2 before:border-white before:rounded-md before:-z-[1]">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
+            <div class="bg-yellow-400 rounded-md text-white py-1 px-2 flex justify-center items-center w-full h-full">
                 <i class='bx bxs-bell-ring animate-right opacity-0'></i>
             </div>
         </div>
         <div class="floating animate-up rounded-sm top-24 md:top-1/4 left-1/2 md:left-2/3 p-2">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
             <button onclick="searchingGoogle()">
                 <i class="bx bx-search text-4xl hover:text-yellow-white text-yellow-500 hover:text-white rounded-sm hover:bg-yellow-300 px-1 transition-all duration-150"></i>
             </button>
             <input type="text" class="w-32 outline-none rounded-sm font-semibold placeholder:text-yellow-300 tracking-widest text-yellow-500 placeholder:tracking-wider" placeholder="Emilico Lucuk" id="inputSearch">
         </div>
-        <div class="floating animate-up top-1/2 w-max right-0 md:right-1/4 h-16 backdrop-blur-sm bg-opacity-50">
-            <img draggable="false" src="./img/1.jpg" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
-            <img draggable="false" src="./img/2.jpg" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
-            <img draggable="false" src="./img/3.png" alt="emilico" class="aspect-square opacity-0 w-12 rounded-md shadow-sm animate-right">
+        <div class="floating animate-up top-1/2 w-max right-0 md:right-1/4 h-16 grid grid-cols-3 grid-rows-1 backdrop-blur-sm bg-opacity-50">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
+            <img draggable="false" src="./img/1.jpg" alt="emilico" class="aspect-square opacity-0 w-full h-full rounded-md shadow-sm animate-right">
+            <img draggable="false" src="./img/2.jpg" alt="emilico" class="aspect-square opacity-0 w-full h-full rounded-md shadow-sm animate-right">
+            <img draggable="false" src="./img/3.png" alt="emilico" class="aspect-square opacity-0 w-full h-full rounded-md shadow-sm animate-right">
         </div>
         <div class="floating animate-up rounded-sm justify-start top-1/2 left-48 w-72 flex-wrap hidden md:flex">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
             <div class="flex flex-row justify-between items-center shadow-sm w-full cursor-pointer">
                 <div class="flex flex-row justify-center items-center">
                     <i class="bx bx-chevron-left text-3xl"></i>
@@ -90,18 +118,28 @@
                 </p>    
             </div>
         </div>
-        <div class="floating animate-up top-2/3 left-0 md:top-2/3 md:left-3/4 w-24 h-24 grid grid-cols-2 grid-rows-2 justify-center items-center text-center">
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="discord:">
+        <div class="floating animate-up top-2/3 left-0 md:top-2/3 md:left-3/4 grid grid-cols-2 grid-rows-3 justify-center items-center text-center">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="discord:">
                 <i class="bx bxl-discord-alt text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://m.facebook.com/story.php?story_fbid=pfbid0WGK9nSuWUxKi6pk5X2GCGgF4YJW5qH4Sv77zQvqmmDvru97RSQV5STA24D2vsHhJl&id=100011667486308&mibextid=Nif5oz">
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="https://m.facebook.com/story.php?story_fbid=pfbid0WGK9nSuWUxKi6pk5X2GCGgF4YJW5qH4Sv77zQvqmmDvru97RSQV5STA24D2vsHhJl&id=100011667486308&mibextid=Nif5oz">
                 <i class="bx bxl-facebook text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://instagram.com">
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="https://instagram.com">
                 <i class="bx bxl-instagram text-xl text-white"></i>
             </a>
-            <a draggable="false" class="bg-yellow-300 p-1 rounded-sm animate-right opacity-0" href="https://twitter.com">
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="https://twitter.com">
                 <i class="bx bxl-twitter text-xl text-white"></i>
+            </a>
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="https://youtube.com">
+                <i class="bx bxl-youtube text-xl text-white"></i>
+            </a>
+            <a draggable="false" class="flex justify-center items-center bg-yellow-300 p-1 rounded-sm animate-right h-full overflow-hidden px-2 opacity-0" href="https://web.whatsapp.com">
+                <i class="bx bxl-whatsapp text-xl text-white"></i>
             </a>
         </div>
         <div class="floating animate-up max-md:hidden top-3/4 left-[40%] backdrop-blur-3xl bg-transparent shadow-none w-max flex-row rounded-full opacity-0 animate-floating">
@@ -114,6 +152,10 @@
          <!-- Music Player -->
          <button class="absolute right-0 top-0 w-14 h-14 rounded-full bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat m-4" onclick="document.getElementById('musicPlayer').style.display = 'flex'"></button>
          <div class="floating animate-after-up top-0 right-0 md:m-2 max-md:h-screen w-full md:w-72 flex-col md:justify-center gap-6 p-2 rounded-sm bg-[linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('./img/music.jpg')] bg-cover bg-center bg-no-repeat text-white duration-500 transition-all origin-top-right opacity-0" id="musicPlayer" style="display: 'none'">
+            <button class="absolute top-0 left-0 w-1 h-1 bg-transparent cursor-nw-resize tl-btn"></button>
+            <button class="absolute top-0 right-0 w-1 h-1 bg-transparent cursor-ne-resize tr-btn"></button>
+            <button class="absolute bottom-0 right-0 w-1 h-1 bg-transparent cursor-nw-resize br-btn"></button>
+            <button class="absolute bottom-0 left-0 w-1 h-1 bg-transparent cursor-ne-resize bl-btn"></button>
              <div class="flex justify-between items-center w-full px-2 max-md:absolute max-md:top-0 max-md:left-0 max-md:p-4">
                  <i class="bx bx-chevron-left text-3xl"></i>
                  <button onclick="document.getElementById('musicPlayer').style.display = 'none'">
@@ -147,6 +189,7 @@
     <script src="script.js"></script>
     <script src="music.js"></script>
     <script src="drag.js"></script>
+    <script src="resizing.js"></script>
     <script src="gsap.js"></script>
 </body>
 </html>
