@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    gsap.to("#loading", {
+        y: '-100%',
+        ease: 'power2.in',
+    })
     gsap.fromTo(".animate-up", {
         y: 10,
         opacity: 0,
